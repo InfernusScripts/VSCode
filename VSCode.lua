@@ -1177,7 +1177,7 @@ do
 		script.Parent.Size = size
 
 		local codeBox = script:FindFirstChild("CodeBox") and require(script.CodeBox) or loadstring(game:HttpGet("https://raw.githubusercontent.com/InfernusScripts/Null-Fire/main/Core/Libraries/CodeBox/Main.lua"))()
-		local textBox = codeBox:fromTextBox(script.Parent.Contents.CodeEditor, syntaxColors)
+		local textBox = codeBox:fromTextBox(script.Parent.Contents.CodeEditor, syntaxColors, getfenv().getgenv and getfenv().getgenv())
 
 		script.Parent.Visible = true
 
